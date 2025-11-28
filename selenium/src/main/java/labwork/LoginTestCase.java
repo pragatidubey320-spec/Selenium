@@ -1,0 +1,37 @@
+package labwork;
+
+import org.openqa.selenium.WebDriver;
+
+
+public class LoginTestCase {
+
+	private LoginPage login;
+	
+	public LoginTestCase(WebDriver driver) {
+		login = new LoginPage(driver);
+	}
+	
+	public void validLogin() {
+		try{login.login("admin", "admin");
+		login.logout();                                                                             
+		System.out.println("successfully login");
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+
+
+	public void invalidlogin() {
+		try 
+		{login.login("admin123", "admin");
+//		login.logout();
+		System.out.println("failed");
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+}

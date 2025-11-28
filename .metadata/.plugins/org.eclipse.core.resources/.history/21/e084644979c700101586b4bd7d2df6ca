@@ -1,0 +1,49 @@
+package labwork;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Espocrm {
+
+public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://localhost/espocrm");
+		Thread.sleep(Duration.ofSeconds(2));
+		
+	
+		
+		driver.findElement(By.xpath("//*[@name='username']")).sendKeys("admin");
+		driver.findElement(By.xpath("//*[@name='password']")).sendKeys("admin");
+		Thread.sleep(Duration.ofSeconds(2));
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"btn-login\"]")).click();
+		Thread.sleep(Duration.ofSeconds(2));
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"navbar\"]/div/div[2]/div[1]/ul/li[3]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"main\"]/div[3]/div[3]/table/tbody/tr/td[2]/a")).click();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		 
+		 
+		
+		
+}
+}

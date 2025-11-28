@@ -1,0 +1,63 @@
+
+
+
+	package test;
+	import java.time.Duration;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.chrome.ChromeDriver;
+	public class Assign1 {
+		public static boolean check_element(WebDriver driver, By locate) {
+		    try {
+		        driver.findElement(locate); 
+		        return true;                
+		    }
+		    catch (Exception f) {
+		        return false;              
+		    }
+		}
+		public static void main(String[] args) throws InterruptedException {
+			
+			WebDriver driver = new ChromeDriver();
+			
+			driver.manage().window().maximize();
+			
+			
+			driver.get("https://practicetestautomation.com/practice-test-login/");
+			//
+	      By elee = By.id("username");
+	      if(check_element(driver, elee)) {
+	          WebElement el = driver.findElement(elee);
+	          el.sendKeys("student");
+	      }
+	      else {
+	      	System.out.println("Username element not found");
+	      }
+	    
+		Thread.sleep(Duration.ofSeconds(5));
+		By password = By.id("password");
+		if(check_element(driver, password)) {
+	      WebElement e = driver.findElement(password);
+	      e.sendKeys("Password123");
+	  }
+	  else {
+	  	System.out.println("Password element not found");
+	  }
+		
+		Thread.sleep(Duration.ofSeconds(5));
+		By bt = By.className("btn*");  /////// wrong class name
+		if(check_element(driver, bt)) {
+	      WebElement e = driver.findElement(bt);
+	      e.click();
+	  }
+	  else {
+	  	System.out.println("Login button element not found");
+	  }
+		
+		Thread.sleep(Duration.ofSeconds(5));
+			driver.quit();		
+		}
+		}
+
+

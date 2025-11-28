@@ -1,0 +1,61 @@
+package Day6;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Email {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://mail.google.com/mail/u/0/#inbox");
+		driver.manage().window().maximize();
+		Thread.sleep(Duration.ofSeconds(5));
+		
+//		System.out.println(driver.findElement(By.cssSelector(".whsOnd zHQkBf")).getText());
+		
+		String username="#identifierId";
+		WebElement UserInput=driver.findElement(By.cssSelector(username));
+		UserInput.sendKeys("pragatidubey320@gmail.com");
+		System.out.println("successfully entered username");
+		Thread.sleep(Duration.ofSeconds(5));
+		
+		driver.findElement(By.cssSelector("#identifierNext > div > button")).click();
+		Thread.sleep(Duration.ofSeconds(10));
+		
+
+		String password="#password";
+		WebElement passInput=driver.findElement(By.cssSelector(password));
+		passInput.sendKeys("Pragati@2004");
+		System.out.println("successfully entered password");
+		Thread.sleep(Duration.ofSeconds(5));
+		
+		
+		
+		
+	}
+}
+		
+		
+		
+//		driver.findElement(By.cssSelector(".VfPpkd-vQzf8d")).sendKeys("pragatidubey320@gmail.com");
+		
+		
+//		By user = By.cssSelector("#username");
+//		driver.sendKeys("")
+//		
+//		driver.findElement(By.xpath("//span[@class='VfPpkd-vQzf8d']")).click();
+		
+		
+	//}
+//
+//	private static WebElement sendKeys(String string) {
+//		// TODO Auto-generated method stub
+		
+	//}
+
+//span[@class='VfPpkd-vQzf8d']

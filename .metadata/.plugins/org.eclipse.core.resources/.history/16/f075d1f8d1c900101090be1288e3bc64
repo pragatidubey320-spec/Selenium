@@ -1,0 +1,48 @@
+package Day6;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Flipcart {
+	public static void main(String[] args) throws InterruptedException{
+		
+	
+	
+	WebDriver driver = new ChromeDriver();{
+	driver.manage().window().maximize();
+	driver.get("https://www.flipkart.com/");
+	Thread.sleep(Duration.ofSeconds(15));
+	
+//	actions actions=new action
+//    action.moveToElement(elementToHover).perform();
+//	
+	
+	Actions act = new Actions(driver);
+			WebElement ele=driver.findElement(By.xpath("//img[@alt='Electronics']"));
+	        act.moveToElement(ele).perform();
+			
+			
+
+	act.perform();
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	}
+
+}
+}

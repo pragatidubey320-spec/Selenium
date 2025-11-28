@@ -1,0 +1,43 @@
+package test;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Assign3 {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://localhost/espocrm");
+		driver.manage().window().maximize();
+		Thread.sleep(Duration.ofSeconds(5));
+		
+		WebElement uname=driver.findElement(By.id("field-userName"));
+		uname.sendKeys("admin");
+		Thread.sleep(Duration.ofSeconds(5));
+		
+		WebElement upass=driver.findElement(By.id("field-password"));
+		upass.sendKeys("admin");
+		Thread.sleep(Duration.ofSeconds(5));
+		
+		WebElement login=driver.findElement(By.id("btn-login"));
+		login.click();
+		
+		WebElement accounts=driver.findElement(By.xpath("//a[@href='#Account']"));
+		accounts.click();
+		
+//		WebElement cract = driver.findElement(By.xpath("//a[@class=\"page-header-column-1\"]"));
+//		cract.click();
+		
+		
+		
+		
+		
+		
+	}
+
+}

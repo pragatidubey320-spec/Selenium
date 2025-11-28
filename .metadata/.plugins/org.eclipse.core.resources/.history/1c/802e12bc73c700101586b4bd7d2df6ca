@@ -1,0 +1,49 @@
+package labwork;
+
+import java.time.Duration;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Espocrm {
+
+public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://localhost/espocrm");
+		Thread.sleep(Duration.ofSeconds(2));
+		
+		By locatorUsername = By.id("field-userName");
+		WebElement txtUsername = driver.findElement(locatorUsername);
+		txtUsername.sendKeys("admin");
+		
+		By locatorpassword = By.id("field-password");
+		WebElement txtpassword = driver.findElement(locatorpassword);
+		txtpassword.sendKeys("admin");
+		
+		By locatorLogin = By.tagName("button");
+		WebElement btnLogin = driver.findElement(locatorLogin);
+		btnLogin.click();
+		Thread.sleep(5);
+		
+		
+		 List<WebElement> navItems = driver.findElements(
+                 By.xpath(" List<WebElement> navItems = driver.findElements(\r\n"
+                 		+ "                    By.xpath(\"//ul[@id='nav']/child::li\"));"));
+		 
+//		*[@id="navbar"]/div/div[2]/div[1]/ul/li[3]/a/span[2]
+		 List<WebElement> navItems1 = driver.findElements(
+                 By.xpath(" List<WebElement> navItems = driver.findElements(\r\n"
+                 		+ "                    By.xpath(\"*[@id=\"navbar\"]/div/div[2]/div[1]/ul/li[3]/a/span[2]"));
+		 
+		 
+		 
+		 
+		
+		
+}
+}

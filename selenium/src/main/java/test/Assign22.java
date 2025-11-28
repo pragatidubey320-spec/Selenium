@@ -1,0 +1,49 @@
+package test;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Assign22 {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://localhost/samples/select.php");
+		Thread.sleep(Duration.ofSeconds(5));
+		
+		WebElement el = driver.findElement(By.id("langs"));
+		Select langs = new Select(el);
+		
+		langs.selectByIndex(0);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(1);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(2);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(3);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(4);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(5);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(6);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(7);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(8);
+		Thread.sleep(Duration.ofSeconds(2));
+		langs.selectByIndex(9);
+		
+		
+		
+		driver.quit();
+		
+	}
+
+}

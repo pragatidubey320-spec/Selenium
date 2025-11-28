@@ -1,0 +1,11 @@
+package test;
+
+public class Assign23 {
+	
+	public void check(   element) {
+		if(!elemet is selected)(){
+			element.click()
+		}
+	}
+
+}
