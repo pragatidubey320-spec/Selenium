@@ -4,8 +4,8 @@
     <fullyQualifiedTypeName name="org.openqa.selenium.Point"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.Dimension"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.logging.LogEntries"/>
-    <fullyQualifiedTypeName name="test.main"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="test.main"/>
 </qualifiedTypeNameHistroy>
